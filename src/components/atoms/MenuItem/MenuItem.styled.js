@@ -11,20 +11,24 @@ const MenuItemWrapper = styled.button`
   padding: 0 0.5rem;
   text-align: left;
 
-  span::before {
-    content: '';
-    position: absolute;
-    background-color: #0ff;
-    transition: all 0.3s ease-in-out;
+  span{
+    font-weight: 700;
+    
+    ::before {
+      content: '';
+      position: absolute;
+      background-color: #0ff;
+      transition: all 0.3s ease-in-out;
 
-    width: ${({ mobile, active }) =>
-      mobile ? '0.1rem' : active ? 'calc(100% + .8rem)' : '0%'};
-    height: ${({ mobile, active }) =>
-      mobile ? (active ? 'calc(100% + .8rem)' : '0%') : '0.1rem'};
-    left: ${({ mobile, active }) => (mobile ? '0' : active ? '-.4rem' : '')};
-    top: ${({ mobile, active }) => (mobile ? (active ? '-.4rem' : '') : '')};
-    right: -.4rem;
-    bottom: -.4rem;
+      width: ${({ mobile, active }) =>
+        mobile ? '0.1rem' : active ? 'calc(100% + .8rem)' : '0%'};
+      height: ${({ mobile, active }) =>
+        mobile ? (active ? 'calc(100% + .8rem)' : '0%') : '0.1rem'};
+      left: ${({ mobile, active }) => (mobile ? '0' : active ? '-.4rem' : '')};
+      top: ${({ mobile, active }) => (mobile ? (active ? '-.4rem' : '') : '')};
+      right: ${({ mobile }) => (mobile ? '0' : '-.4rem')};
+      bottom: ${({ mobile }) => (mobile ? '-.4rem' : '0')};
+    }
   }
 `
 

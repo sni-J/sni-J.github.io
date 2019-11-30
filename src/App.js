@@ -4,7 +4,7 @@ import Header from './components/organisms/Header'
 import HomeContent from './components/organisms/HomeContent'
 
 const App = () => {
-  const [mobile, setMobile] = useState(true)
+  const [mobile, setMobile] = useState(false)
   const resize = () => {
     setMobile(window.innerWidth < 768)
   }
@@ -17,7 +17,7 @@ const App = () => {
   return (
     <div>
       <Header mobile={mobile} />
-      <HomeContent />
+      <HomeContent mobile={mobile} />
     </div>
   )
 }

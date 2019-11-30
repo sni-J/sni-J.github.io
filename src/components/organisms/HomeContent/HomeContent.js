@@ -4,16 +4,26 @@ import HomeContentWrapper from './HomeContent.styled'
 
 import logo from '../../../static/logo/sniperJ.svg'
 
-const HomeContent = () => {
+const HomeContent = ({ mobile }) => {
   return (
-    <HomeContentWrapper>
+    <HomeContentWrapper mobile={mobile}>
       <img src={logo} alt="sniperJ" />
-      <span>
-        <a href="http://github.com/sni-J">github@sni-J</a>|
-        <a href="http://instagram.com/sniperj_got_ya_back">
-          instagram@sniperJ_got_ya_back
-        </a>
-      </span>
+      <div>
+        <span>Seoul, South Korea</span>
+        <span>
+          GitHub<a href="http://github.com/sni-J">sni-J</a>
+        </span>
+        <span>
+          Instagram
+          <a href="http://instagram.com/sniperj_got_ya_back">
+            sniperJ_got_ya_back
+          </a>
+        </span>
+        <span>
+          Email
+          <a href="mailto:wjl0316@kaist.ac.kr">wjl0316@kaist.ac.kr</a>
+        </span>
+      </div>
     </HomeContentWrapper>
   )
 }
