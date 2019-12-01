@@ -36,13 +36,6 @@ const DevContentWrapper = styled.div`
   a {
     padding: 0.5rem;
     font-weight: 400;
-    text-decoration: none;
-    color: #fff;
-    white-space: nowrap;
-
-    :hover {
-      color: #0ff;
-    }
   }
 `
 
