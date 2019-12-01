@@ -13,26 +13,6 @@ const DevContentWrapper = styled.div`
   align-items: center;
   scroll-snap-align: center;
 
-  img {
-    max-width: 60vw;
-    max-height: 10em;
-    padding: 2rem;
-  }
-
-  div {
-    display: flex;
-    flex-direction: column;
-    align-items: ${({ mobile }) => (mobile ? 'center' : 'start')};
-    padding: 2rem;
-    border-left: ${({ mobile }) => (mobile ? '' : '1px solid #fff')};
-  }
-
-  span {
-    color: #fff;
-    font-weight: 800;
-    text-align: center;
-  }
-
   a {
     padding: 0.5rem;
     font-weight: 400;
