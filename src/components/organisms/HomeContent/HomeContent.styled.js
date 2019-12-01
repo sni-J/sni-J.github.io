@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 
 const HomeContentWrapper = styled.div`
+  box-sizing: border-box;
   background-color: #222;
   margin: 0;
-  width: 100vw;
+  width: 100%;
   height: calc(100vh - 3.8rem);
   overflow: hidden;
   display: flex;

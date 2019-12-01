@@ -15,13 +15,14 @@ const HeaderWrapper = styled.div`
   transition: all 0.3s linear;
 
   > div {
+    box-sizing: border-box;
     position: absolute;
     display: flex;
     flex-direction: ${({ mobile }) => (mobile ? 'column' : 'row')};
     justify-content: flex-end;
     padding: 0 ${({ mobile }) => (mobile ? '1rem' : '3rem')};
     margin-top: ${({ mobile }) => (mobile ? '3.8rem' : '0')};
-    width: -webkit-fill-available;
+    width: 100%;
   }
 
   button {
