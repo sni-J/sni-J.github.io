@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const TabContentWrapper = styled.div`
+const ScrollableWrapper = styled.div`
   box-sizing: border-box;
   height: 100vh;
   overflow-y: scroll;
@@ -17,4 +17,4 @@ const TabContentWrapper = styled.div`
   transition: all 0.3s linear;
 `
 
-export default TabContentWrapper
+export default ScrollableWrapper

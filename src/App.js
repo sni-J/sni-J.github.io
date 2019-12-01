@@ -2,8 +2,10 @@ import React, { useState, useEffect, createRef } from 'react'
 
 import AppWrapper from './App.styled'
 
+import Scrollable from './components/molecules/Scrollable'
 import Header from './components/organisms/Header'
-import TabContent from './components/organisms/TabContent'
+import HomeContent from './components/organisms/HomeContent'
+import DevContent from './components/organisms/DevContent'
 
 const App = () => {
   const [mobile, setMobile] = useState(false)
@@ -44,7 +46,10 @@ const App = () => {
   return (
     <AppWrapper onScroll={scroll}>
       <Header {...{ activeItem, scrollTo, menuItems, mobile, open, setOpen }} />
-      <TabContent {...{ mobile, open }} ref={appRef} />
+      <Scrollable {...{ mobile, open }} ref={appRef}>
+        <HomeContent mobile={mobile} />
+        <DevContent mobile={mobile} />
+      </Scrollable>
     </AppWrapper>
   )
 }

@@ -1,12 +1,12 @@
 import React from 'react'
 
-import DevelopmentContentWrapper from './DevContent.styled'
+import HomeContentWrapper from './HomeContent.styled'
 
-import logo from '../../../../static/logo/sniperJ.svg'
+import logo from '../../../static/logo/sniperJ.svg'
 
-const DevelopmentContent = ({ mobile }) => {
+const HomeContent = ({ mobile }) => {
   return (
-    <DevelopmentContentWrapper mobile={mobile}>
+    <HomeContentWrapper mobile={mobile}>
       <img src={logo} alt="sniperJ" />
       <div>
         <span>Seoul, South Korea</span>
@@ -24,8 +24,8 @@ const DevelopmentContent = ({ mobile }) => {
           <a href="mailto:wjl0316@kaist.ac.kr">wjl0316@kaist.ac.kr</a>
         </span>
       </div>
-    </DevelopmentContentWrapper>
+    </HomeContentWrapper>
   )
 }
 
-export default DevelopmentContent
+export default HomeContent
