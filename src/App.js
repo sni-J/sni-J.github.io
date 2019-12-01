@@ -7,6 +7,7 @@ import TabContent from './components/organisms/TabContent'
 
 const App = () => {
   const [mobile, setMobile] = useState(false)
+  const [open, setOpen] = useState(false)
   const [activeItem, setActiveItem] = useState(0)
 
   const appRef = createRef()
@@ -37,9 +38,9 @@ const App = () => {
   })
 
   return (
-    <AppWrapper onScroll={scroll} ref={appRef}>
-      <Header {...{ activeItem, scrollTo, menuItems, mobile }} />
-      <TabContent mobile={mobile} />
+    <AppWrapper onScroll={scroll}>
+      <Header {...{ activeItem, scrollTo, menuItems, mobile, open, setOpen }} />
+      <TabContent {...{ mobile, open }} ref={appRef} />
     </AppWrapper>
   )
 }

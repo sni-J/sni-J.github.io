@@ -13,6 +13,7 @@ const HeaderWrapper = styled.div`
     mobile ? (open ? '100vh' : '3.8rem') : '3.8rem'};
   overflow: hidden;
   transition: all 0.3s linear;
+  z-index: 10;
 
   > div {
     box-sizing: border-box;

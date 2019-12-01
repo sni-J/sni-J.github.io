@@ -12,6 +12,9 @@ const TabContentWrapper = styled.div`
   ::-webkit-scrollbar {
     display: none;
   }
+
+  filter: ${({ open }) => (open ? 'blur(.5rem)' : '')};
+  transition: all 0.3s linear;
 `
 
 export default TabContentWrapper

@@ -1,12 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import HeaderWrapper from './Header.styled'
 
 import MenuItem from '../../atoms/MenuItem'
 import MenuBtn from '../../atoms/MenuBtn'
 
-const Header = ({ activeItem, scrollTo, menuItems, mobile }) => {
-  const [open, setOpen] = useState(false)
-
+const Header = ({ activeItem, scrollTo, menuItems, mobile, open, setOpen }) => {
   return (
     <HeaderWrapper mobile={mobile} open={open}>
       <div>
