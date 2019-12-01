@@ -14,16 +14,16 @@ const HomeContentWrapper = styled.div`
   scroll-snap-align: center;
 
   img {
-    max-width: 60vw;
+    max-width: 50vw;
     max-height: 10em;
-    padding: 2rem;
+    padding: 1rem;
   }
 
   div {
     display: flex;
     flex-direction: column;
     align-items: ${({ mobile }) => (mobile ? 'center' : 'start')};
-    padding: 2rem;
+    padding: 1rem;
     border-left: ${({ mobile }) => (mobile ? '' : '1px solid #fff')};
   }
 
