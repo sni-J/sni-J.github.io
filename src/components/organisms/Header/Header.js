@@ -4,22 +4,17 @@ import HeaderWrapper from './Header.styled'
 import MenuItem from '../../atoms/MenuItem'
 import MenuBtn from '../../atoms/MenuBtn'
 
-const menuItems = ['Home', 'Development']
-
-const Header = ({ mobile }) => {
+const Header = ({ activeItem, scrollTo, menuItems, mobile }) => {
   const [open, setOpen] = useState(false)
-  const [activeItem, setActiveItem] = useState('Home')
 
   return (
     <HeaderWrapper mobile={mobile} open={open}>
       <div>
-        {menuItems.map(item => (
+        {menuItems.map((content, idx) => (
           <MenuItem
-            activeItem={activeItem}
-            setActiveItem={setActiveItem}
-            content={item}
-            mobile={mobile}
-            key={item}
+            active={menuItems[activeItem] === content}
+            {...{ scrollTo, idx, content, mobile, setOpen }}
+            key={idx}
           />
         ))}
       </div>

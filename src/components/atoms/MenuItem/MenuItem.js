@@ -1,12 +1,17 @@
 import React from 'react'
 import MenuItemWrapper from './MenuItem.styled'
 
-const MenuItem = ({ mobile, activeItem, setActiveItem, content }) => {
+const MenuItem = ({ mobile, active, scrollTo, content, idx, setOpen }) => {
   return (
     <MenuItemWrapper
       mobile={mobile}
-      active={activeItem === content}
-      onClick={() => setActiveItem(content)}
+      active={active}
+      onClick={() => {
+        scrollTo(idx)
+        if (mobile) {
+          setOpen(false)
+        }
+      }}
     >
       <span>{content}</span>
     </MenuItemWrapper>
