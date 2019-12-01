@@ -12,7 +12,7 @@ const App = () => {
 
   const appRef = createRef()
 
-  const menuItems = ['home', 'development']
+  const menuItems = ['contact', 'development']
 
   const resize = () => {
     setMobile(window.innerWidth < 768 && window.innerHeight > window.innerWidth)
