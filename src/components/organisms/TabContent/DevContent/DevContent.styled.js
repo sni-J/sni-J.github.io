@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
-const HomeContentWrapper = styled.div`
+const DevContentWrapper = styled.div`
   box-sizing: border-box;
-  background-color: #222;
+  background-color: #555;
   margin: 0;
   width: 100%;
-  height: calc(100vh - 3.8rem);
+  height: 100vh;
   overflow: hidden;
   display: flex;
   flex-direction: ${({ mobile }) => (mobile ? 'column' : 'row')};
@@ -14,16 +14,16 @@ const HomeContentWrapper = styled.div`
   scroll-snap-align: center;
 
   img {
-    max-width: 50vw;
+    max-width: 60vw;
     max-height: 10em;
-    padding: 1rem;
+    padding: 2rem;
   }
 
   div {
     display: flex;
     flex-direction: column;
     align-items: ${({ mobile }) => (mobile ? 'center' : 'start')};
-    padding: 1rem;
+    padding: 2rem;
     border-left: ${({ mobile }) => (mobile ? '' : '1px solid #fff')};
   }
 
@@ -46,4 +46,4 @@ const HomeContentWrapper = styled.div`
   }
 `
 
-export default HomeContentWrapper
+export default DevContentWrapper
