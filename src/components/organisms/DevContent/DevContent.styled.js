@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const DevContentWrapper = styled.div`
   box-sizing: border-box;
-  background-color: #555;
+  background-color: rgb(35, 35, 35);
   margin: 0;
   width: 100%;
   height: 100vh;

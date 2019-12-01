@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const HeaderWrapper = styled.div`
   position: fixed;
-  background-color: rgba(34, 34, 34, 0.8);
+  background-color: rgba(35, 35, 35, 0.8);
   top: 0;
   left: 0;
   right: 0;
