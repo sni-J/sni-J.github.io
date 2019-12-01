@@ -12,7 +12,8 @@ const MenuItemWrapper = styled.button`
   text-align: left;
 
   span{
-    font-weight: 700;
+    font-weight: 400;
+    text-transform: uppercase;
     
     ::before {
       content: '';
