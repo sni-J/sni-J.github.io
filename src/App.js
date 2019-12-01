@@ -25,10 +25,14 @@ const App = () => {
 
   const scrollTo = idx => {
     if (appRef) {
-      appRef.current.scrollTo({
-        top: appRef.current.clientHeight * idx,
-        behavior: 'smooth',
-      })
+      if (typeof appRef.current.scrollTo === 'function') {
+        appRef.current.scrollTo({
+          top: appRef.current.clientHeight * idx,
+          behavior: 'smooth',
+        })
+      } else {
+        appRef.current.scrollTop = appRef.current.clientHeight * idx
+      }
     }
   }
 
