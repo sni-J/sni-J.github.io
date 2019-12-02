@@ -8,9 +8,8 @@ const DevContentWrapper = styled.div`
   height: 100vh;
   overflow: hidden;
   display: flex;
-  flex-direction: ${({ mobile }) => (mobile ? 'column' : 'row')};
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
   scroll-snap-align: center;
 
   a {
