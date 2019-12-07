@@ -23,13 +23,44 @@ const Cards = ({ cards, mobile }) => {
     })
   }
 
+  const scrollTo = delta => {
+    if (cardsRef.current) {
+      if (typeof cardsRef.current.scrollTo === 'function') {
+        cardsRef.current.scrollTo({
+          left:
+            cardsRef.current.scrollLeft +
+            cardRefs[activeCard].current.offsetWidth * delta,
+          behavior: 'smooth',
+        })
+      } else {
+        cardsRef.current.scrollLeft +=
+          cardRefs[activeCard].current.offsetWidth * delta
+      }
+    }
+  }
+
   useEffect(() => {
     cardsRef.current.scrollLeft = cardRefs[0].current.offsetWidth / 2
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
-    <CardsWrapper {...{ cards }} onScroll={scroll} ref={cardsRef}>
+    <CardsWrapper
+      {...{ cards, activeCard }}
+      lastCard={cards.length - 1}
+      onScroll={scroll}
+      ref={cardsRef}
+    >
+      <button
+        onClick={() => {
+          scrollTo(-1)
+        }}
+      ></button>
+      <button
+        onClick={() => {
+          scrollTo(1)
+        }}
+      ></button>
       <div>
         {cards.map((card, i) => (
           <Card
