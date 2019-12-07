@@ -39,14 +39,17 @@ const CardWrapper = styled.div`
 
       div.logo {
         position: absolute;
-        bottom: 0;
-        right: 0;
+        bottom: -1px;
+        right: -1px;
+        padding: 0 1px 1px 0;
         border-top-left-radius: 0.5rem;
         z-index: 1;
 
         background: linear-gradient(
-          rgba(53, 53, 53, 0.2) 50%,
-          rgba(53, 53, 53, 1) 90%
+          rgba(53, 53, 53, 0.1) 0%,
+          rgba(53, 53, 53, 0.5) 80%,
+          rgba(53, 53, 53, 0.8) 90%,
+          rgba(53, 53, 53, 1) 95%
         );
 
         > img {
@@ -54,6 +57,18 @@ const CardWrapper = styled.div`
           box-sizing: border-box;
           height: 5rem;
           padding: 1rem;
+        }
+
+        ::before {
+          content: '';
+          position: absolute;
+          bottom: 1px;
+          right: 1px;
+          border-top-left-radius: 0.5rem;
+          z-index: -1;
+          width: calc(100% - 1px);
+          height: calc(100% - 1px);
+          backdrop-filter: blur(3px);
         }
       }
     }
