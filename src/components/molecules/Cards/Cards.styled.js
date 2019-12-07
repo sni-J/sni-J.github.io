@@ -2,10 +2,14 @@ import styled from 'styled-components'
 
 const CardsWrapper = styled.div`
   box-sizing: border-box;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   overflow: auto;
   scroll-snap-type: x mandatory;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 
   -ms-overflow-style: none;
   ::-webkit-scrollbar {
@@ -13,11 +17,9 @@ const CardsWrapper = styled.div`
   }
 
   > div {
-    height: 100%;
-    display: inline-flex;
+    display: flex;
     flex-direction: row;
-    align-items: center;
-    margin: 0 50vw;
+    padding: 0 50vw;
   }
 `
 

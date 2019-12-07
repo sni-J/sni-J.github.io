@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 const CardWrapper = styled.div`
   display: flex;
+  align-self: center;
   flex-direction: ${({ mobile }) => (mobile ? 'column' : 'row')};
   filter: ${({ active }) => (active ? '' : 'brightness(0.5) blur(10px)')};
   transform: ${({ active }) => (active ? '' : 'scale(0.8)')};
