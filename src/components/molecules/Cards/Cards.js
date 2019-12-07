@@ -25,6 +25,7 @@ const Cards = ({ cards, mobile }) => {
 
   useEffect(() => {
     cardsRef.current.scrollLeft = cardRefs[0].current.offsetWidth / 2
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
