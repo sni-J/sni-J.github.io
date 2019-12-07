@@ -41,7 +41,7 @@ const App = () => {
   useEffect(() => {
     resize()
     window.addEventListener('resize', resize)
-  })
+  }, [])
 
   return (
     <AppWrapper onScroll={scroll}>
