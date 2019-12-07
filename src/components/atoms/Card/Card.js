@@ -2,21 +2,37 @@ import React, { forwardRef } from 'react'
 import CardWrapper from './Card.styled'
 
 const Card = forwardRef(
-  ({ mobile, name, logo, description, links, active }, ref) => {
+  ({ mobile, name, meta, description, date, logo, bg, links, active }, ref) => {
+    let logo_img
+    try {
+      logo_img = require(`../../../static/logo/${logo}`)
+    } catch (e) {
+      logo_img = false
+    }
+
+    let background
+    try {
+      background = require(`../../../static/images/bg_img/${bg}`)
+    } catch (e) {
+      background = require(`../../../static/images/bg_img/no_img.png`)
+    }
+
     return (
-      <CardWrapper
-        {...{ mobile, name, logo, description, links, active }}
-        ref={ref}
-      >
+      <CardWrapper {...{ mobile, name, active, background }} ref={ref}>
         <div className="plane">
           <div className="images">
-            <div className="logo">
-              <img src={require(`../../../static/logo/${name}.svg`)} alt="" />
-            </div>
+            {logo_img ? (
+              <div className="logo">
+                <img src={logo_img} alt="" />
+              </div>
+            ) : null}
           </div>
           <div className="description">
             <h1>{name}</h1>
+            <h4>{meta}</h4>
             <span>{description}</span>
+            <hr />
+            <span>{date}</span>
           </div>
         </div>
         <div className="links">

@@ -1,11 +1,9 @@
 import styled from 'styled-components'
 
-import no_img from '../../../static/images/bg_img/no_img.png'
-
 const CardWrapper = styled.div`
   display: flex;
   flex-direction: ${({ mobile }) => (mobile ? 'column' : 'row')};
-  filter: ${({ active }) => (active ? '' : 'brightness(0.5) blur(5px)')};
+  filter: ${({ active }) => (active ? '' : 'brightness(0.5) blur(10px)')};
   transform: ${({ active }) => (active ? '' : 'scale(0.8)')};
   transition: all 0.3s linear;
   pointer-events: ${({ active }) => (active ? '' : 'none')};
@@ -33,34 +31,27 @@ const CardWrapper = styled.div`
       z-index: 0;
 
       background-size: contain;
-      background-image: url(${no_img});
-      background-image: ${({ name }) =>
-        name
-          ? `url(${require(`../../../static/images/bg_img/${name}.png`)})`
-          : ''};
+      background-image: ${({ background }) => `url(${background})`};
 
       border-top-left-radius: 0.5rem;
       border-top-right-radius: 0.5rem;
 
       div.logo {
         position: absolute;
-        bottom: -0.5rem;
-        right: -0.5rem;
-        width: 10rem;
-        padding-bottom: 0.5rem;
-        padding-right: 0.5rem;
+        bottom: 0;
+        right: 0;
         border-top-left-radius: 0.5rem;
         z-index: 1;
 
         background: linear-gradient(
-          rgba(53, 53, 53, 0.3),
-          rgb(53, 53, 53, 1) 90%
+          rgba(53, 53, 53, 0.2) 50%,
+          rgba(53, 53, 53, 1) 90%
         );
 
         > img {
           display: block;
           box-sizing: border-box;
-          width: 100%;
+          height: 5rem;
           padding: 1rem;
         }
       }
@@ -73,12 +64,20 @@ const CardWrapper = styled.div`
       > h1 {
         font-size: 1.5rem;
         margin: 0;
-        color: #fff;
+        color: rgba(255, 255, 255, 1);
         font-weight: 800;
+      }
+
+      > h4 {
+        font-size: 0.8rem;
+        margin: 0;
+        color: rgba(255, 255, 255, 0.6);
+        font-weight: 400;
       }
 
       > span {
         color: rgba(255, 255, 255, 0.87);
+        word-break: keep-all;
       }
     }
   }
@@ -100,8 +99,16 @@ const CardWrapper = styled.div`
       border-bottom-right-radius: 0.5rem;
     }
 
+    a {
+      display: block;
+      padding: 0 0.5rem;
+
+      :hover {
+        color: rgba(0, 255, 255, 1);
+      }
+    }
+
     span {
-      color: rgba(255, 255, 255, 1);
       font-weight: 400;
     }
   }
