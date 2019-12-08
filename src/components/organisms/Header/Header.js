@@ -1,8 +1,8 @@
 import React from 'react'
 import HeaderWrapper from './Header.styled'
 
-import MenuItem from '../../atoms/MenuItem'
-import MenuBtn from '../../atoms/MenuBtn'
+import MenuItem from 'components/atoms/MenuItem'
+import MenuBtn from 'components/atoms/MenuBtn'
 
 const Header = ({ activeItem, scrollTo, menuItems, mobile, open, setOpen }) => {
   return (

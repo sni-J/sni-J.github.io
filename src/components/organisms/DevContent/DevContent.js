@@ -2,7 +2,7 @@ import React from 'react'
 
 import DevContentWrapper from './DevContent.styled'
 
-import Cards from '../../molecules/Cards'
+import Cards from 'components/molecules/Cards'
 
 const cards = [
   {
