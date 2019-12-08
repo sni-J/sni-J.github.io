@@ -13,7 +13,6 @@ const ScrollableWrapper = styled.div`
     display: none;
   }
 
-  filter: ${({ open }) => (open ? 'blur(.5rem)' : '')};
   transition: all 0.3s linear;
 `
 

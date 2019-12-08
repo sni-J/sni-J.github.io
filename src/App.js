@@ -8,7 +8,7 @@ import HomeContent from './components/organisms/HomeContent'
 import DevContent from './components/organisms/DevContent'
 
 const App = () => {
-  const [mobile, setMobile] = useState(false)
+  const [mobile, setMobile] = useState(undefined)
   const [open, setOpen] = useState(false)
   const [activeItem, setActiveItem] = useState(0)
 
@@ -46,7 +46,7 @@ const App = () => {
   return (
     <AppWrapper onScroll={scroll}>
       <Header {...{ activeItem, scrollTo, menuItems, mobile, open, setOpen }} />
-      <Scrollable {...{ mobile, open }} ref={appRef}>
+      <Scrollable ref={appRef}>
         <HomeContent mobile={mobile} />
         <DevContent mobile={mobile} />
       </Scrollable>
