@@ -64,8 +64,8 @@ const cards = [
     logo: 'EOS.png',
     bg: 'eosofksa.github.io.png',
     links: [
-      { name: 'Link', link: 'http://ksared.herokuapp.com' },
-      { name: 'GitHub', link: 'http://github.com/sni-J/ksared' },
+      { name: 'Link', link: 'http:/eosofksa.github.io' },
+      { name: 'GitHub', link: 'http://github.com/eosofksa/eosofksa.github.io' },
     ],
   },
 ]
