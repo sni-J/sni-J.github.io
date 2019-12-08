@@ -30,7 +30,6 @@ const Cards = ({ cards, mobile }) => {
           left:
             cardsRef.current.scrollLeft +
             cardRefs[activeCard].current.offsetWidth * delta,
-          behavior: 'smooth',
         })
       } else {
         cardsRef.current.scrollLeft +=
