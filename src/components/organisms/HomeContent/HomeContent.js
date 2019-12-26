@@ -2,7 +2,7 @@ import React from 'react'
 
 import HomeContentWrapper from './HomeContent.styled'
 
-import logo from 'static/logo/sniperJ.svg'
+import logo from 'static/logo/sniperJ_logo.svg'
 
 const HomeContent = ({ mobile }) => {
   return (
