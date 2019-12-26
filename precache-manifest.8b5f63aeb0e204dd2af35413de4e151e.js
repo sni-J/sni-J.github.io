@@ -1,27 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "05a23c995ff50944e49eb66cfa9ffc69",
+    "revision": "5a1646bd6b98c0d133d3a54b0b237844",
     "url": "/index.html"
   },
   {
-    "revision": "9dd6152bf55797baac0f",
+    "revision": "44e3ac81082cbea7fe1e",
     "url": "/static/css/main.f8f7629c.chunk.css"
   },
   {
-    "revision": "639f3fbeee682024f991",
-    "url": "/static/js/2.b988f45b.chunk.js"
+    "revision": "ea07c023e61225060d23",
+    "url": "/static/js/2.1885b645.chunk.js"
   },
   {
-    "revision": "fd228f9b9a68ce6b23a6cf8b0a38a0e3",
-    "url": "/static/js/2.b988f45b.chunk.js.LICENSE"
+    "revision": "44e3ac81082cbea7fe1e",
+    "url": "/static/js/main.fb3bed7f.chunk.js"
   },
   {
-    "revision": "9dd6152bf55797baac0f",
-    "url": "/static/js/main.f7a38557.chunk.js"
-  },
-  {
-    "revision": "ea9ed335302cbddf040a",
-    "url": "/static/js/runtime-main.55d76d8a.js"
+    "revision": "8b202ff5e3c5694adf56",
+    "url": "/static/js/runtime-main.555c328d.js"
   },
   {
     "revision": "90f478b64f5443c5d82b07dc8760e5bb",
@@ -40,8 +36,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/RunDry.25c9dd77.png"
   },
   {
-    "revision": "5800eb6184feb433447b571fba7e8d4c",
-    "url": "/static/media/RunDry.5800eb61.svg"
+    "revision": "7e2a06c168681ec122ac56fa9bf01d14",
+    "url": "/static/media/RunDry.7e2a06c1.svg"
   },
   {
     "revision": "1fa378fecb9c7cca2eacf9f52d09c5b7",
@@ -56,11 +52,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/no_img.ea9a9ae2.png"
   },
   {
-    "revision": "eaeafd8fea0c184ca3877dddaa44dbea",
-    "url": "/static/media/sni-j.github.io.eaeafd8f.png"
+    "revision": "08ab2628f867e16ccc1c091cc2c3330c",
+    "url": "/static/media/sni-j.github.io.08ab2628.png"
   },
   {
-    "revision": "e7e1c6b5ba8d58f5c15e6c82aa7624e1",
-    "url": "/static/media/sniperJ.e7e1c6b5.svg"
+    "revision": "2b5129833c3925ec2763267ba7f20caf",
+    "url": "/static/media/sniperJ.2b512983.svg"
+  },
+  {
+    "revision": "2b5129833c3925ec2763267ba7f20caf",
+    "url": "/static/media/sniperJ_logo.2b512983.svg"
   }
 ]);
