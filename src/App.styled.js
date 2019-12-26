@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const AppWrapper = styled.div`
-  background-color: #222;
+  background-color: rgb(35, 35, 35);
   user-select: none;
 
   a {
